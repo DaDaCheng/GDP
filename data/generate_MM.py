@@ -9,9 +9,9 @@ import pickle
 
 parser = argparse.ArgumentParser('Generate diffusion equation data')
 parser.add_argument('--graph', type=str, default='ER')
-parser.add_argument('--num-nodes', type=int, default=20,
+parser.add_argument('--num-nodes', type=int, default=50,
                     help='Number of nodes in the simulation.')
-parser.add_argument('--p', type=float, default=0.5, 
+parser.add_argument('--p', type=float, default=0.1, 
                     help='Connection/add connection probability In ER/NWS')
 parser.add_argument('--k', type=int, default=2, 
                     help='Inital node degree in BA/NWS')

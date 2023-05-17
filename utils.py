@@ -196,18 +196,3 @@ def generate_prediction_nri(edge_prob, edge_index):
     A_hard = to_dense_adj(edge_index, edge_attr = A_hard).cpu().squeeze(0).numpy()
     return A_soft, A_hard
    
-
-
-# def generate_prediction(edge_prob, edge_index):
-#     A_hard = (edge_prob[1] > edge_prob[0]).long()
-#     # to avoid complement graph ambiguity, we assume a sparse prior
-#     # and predict the graph to be the one with less edges
-#     node_pairs = edge_prob.size(-1)
-#     if A_hard.sum() > int(node_pairs/2):
-#         A_hard = 1- A_hard
-#         A_soft = to_dense_adj(edge_index, edge_attr = edge_prob[0]).cpu().squeeze(0).numpy()
-#     else:  
-#         A_soft = to_dense_adj(edge_index, edge_attr = edge_prob[1]).cpu().squeeze(0).numpy()
-
-#     A_hard = to_dense_adj(edge_index, edge_attr = A_hard).cpu().squeeze(0).numpy()
-#     return A_soft, A_hard

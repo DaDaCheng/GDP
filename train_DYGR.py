@@ -3,7 +3,7 @@ import random
 import torch.optim as optim
 from utils import *
 import argparse
-from model_DGP import *
+from model_DYGR import *
 import matplotlib.pyplot as plt
 import numpy as np
 import torch.nn as nn
